@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دعوة زفاف - شيماء & محمد</title>
+
+<style>
+body {
+  margin: 17px 0;
+  padding: 0;
+  font-family: "Tajawal", sans-serif;
+  background-image: url("download\ \(1\).jpg"); 
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+/* الحاوية */
+.container {
+  width: 100%;
+  height: 90vh;
+  max-width: 400px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+     border-radius: 35px;
+    border: 3px solid rgba(210, 175, 95, 0.95);
+    background: #ffffff00; /* شفاف بحيث الخلفية تبان */
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.35),
+        0 10px 20px rgba(0, 0, 0, 0.25),
+        0 0 35px rgba(255, 215, 140, 0.65); /* توهّج ذهبي */
+    transform: translateZ(40px) scale(1.03);
+    transition: 0.5s ease-in-out;
+}
+
+/* الوردة */
+
+
+/* النصوص */
+h1, h2, p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1.3s forwards;
+  color: #4b3b3b;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  animation-delay: 1s;
+}
+
+h2 {
+  margin: 200px 0 -15px  ;
+  font-size: 1.4rem;
+  animation-delay: 2s;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.details p:nth-child(1) { animation-delay: 3s; }
+.details p:nth-child(2) { animation-delay: 3.6s; }
+.details p:nth-child(3) { animation-delay: 4.2s; }
+
+.footer {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  animation-delay: 5s;
+  font-weight: 600;
+}
+
+/* الأنيميشن */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: .8; }
+}
+
+
+/* لمعة عند الـ Hover */
+
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <!-- رسمة ورد مؤقتة - هقوم أبدّلها برسم أجمل -->
+
+  <h2 >يسعدنا أن تشاركونا فرحتنا</h2>
+  <h1>شيماء & محمد</h1>
+  <audio id="weddingSong" src="../13-helm-seneen_DWTzJQEV.mp3"  autoplay></audio>
+  <div class="details">
+    <p>الاثنين — 17 نوفمبر 2025</p>
+    <p>الساعة 7 مساءً</p>
+    <p>قاعة الأنفوشي</p>
+  </div>
+
+  <p class="footer">فرحتنا هتكمل بوجودكم</p>
+<script>
+  const song = document.getElementById("weddingSong");
+
+  // محاولة التشغيل التلقائي
+  song.play().catch(() => {
+    // في حالة المتصفح رفض التشغيل
+    document.body.addEventListener('click', () => song.play(), { once: true });
+  });
+</script>
+</div>
+
+</body>
+</html>
